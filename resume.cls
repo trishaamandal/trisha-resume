@@ -5,10 +5,10 @@
 \usepackage{ifthen}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
 }
 
 \pagestyle{empty}
@@ -25,26 +25,26 @@
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
   }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
+    \@ifundefined{@addressthree}{
+      \def \@addressthree {#1}
+    }{
+      \def \@addressone {#1}
+    }}
 }
 
 \def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
+\begingroup
+\def \\ {\addressSep\ }
+\centerline{#1}
+\endgroup
+\par
+\addressskip
 }
 
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+  \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+  \nameskip\break
   \endgroup
 }
 
@@ -56,7 +56,7 @@
     \printaddress{\@addressone}}
   \@ifundefined{@addresstwo}{}{
     \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{
+  \@ifundefined{@addressthree}{}{
     \printaddress{\@addressthree}}
 }
 
@@ -66,23 +66,23 @@
   \sectionlineskip
   \hrule
   \begin{list}{}{
-    \setlength{\leftmargin}{0em}
-  }
-  \item[]
-}{
+      \setlength{\leftmargin}{0em}
+    }
+    \item[]
+      }{
   \end{list}
 }
 \newenvironment{rSubsection}[4]{
- {\bf #1} \hfill {#2}
- \ifthenelse{\equal{#3}{}}{}{
-  \\
-  {\em #3} \hfill {\em #4}
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em}
-   \itemsep -0.5em \vspace{-0.5em}
+{\bf #1} \hfill {#2}
+\ifthenelse{\equal{#3}{}}{}{
+\\
+{\em #3} \hfill {\em #4}
+}\smallskip
+\begin{list}{$\cdot$}{\leftmargin=0em}
+  \itemsep -0.5em \vspace{-0.5em}
   }{
-  \end{list}
-  \vspace{0.5em}
+\end{list}
+\vspace{0.5em}
 }
 
 \def\namesize{\LARGE}
