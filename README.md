@@ -1,4 +1,4 @@
-# Arkapravo Ghosh's Resume
+# Trisha Mandal Resume
 My own Resume made using LaTeX
 > [View Resume](Arkapravo_Ghosh_Resume.pdf)
 
